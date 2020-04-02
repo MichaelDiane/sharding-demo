@@ -61,6 +61,19 @@
 	        <artifactId>mybatis-plus-boot-starter</artifactId>
 	        <version>3.3.1.tmp</version>
    	 	</dependency>
+   	 	
+   	 	<!--Sharding Jar包-->
+   	 	<!-- <dependency>
+		    <groupId>org.apache.shardingsphere</groupId>
+		    <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
+   	 	
+   	 	<dependency>
+		    <groupId>org.apache.shardingsphere</groupId>
+		    <artifactId>sharding-jdbc-spring-namespace</artifactId>
+		    <version>4.0.0</version>
+		</dependency> -->
 		
 		<dependency>
 		  <groupId>com.google.guava</groupId>

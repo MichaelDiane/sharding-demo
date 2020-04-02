@@ -11,7 +11,7 @@ import lombok.Data;
  *@DESC  
  */
 
-@TableName("tb_user")
+@TableName("tb_member")
 @Data
 public class User implements Serializable{
 	private static final long serialVersionUID = -4016476269395366566L;

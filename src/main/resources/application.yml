@@ -5,7 +5,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.56.101:3306/db_user?useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://192.168.56.101:3306/db_member?useUnicode=true&characterEncoding=utf-8
       username: root
       password: 123456
       #初始化时建立物理连接的个数
@@ -58,7 +58,12 @@ mybatis-plus:
   - classpath:mybtais/mapper/*.xml
   type-aliases-package: com.example.sharding.entity
   
+##sharding 配置
+
+  
 # Logger Config
 logging:
   level:
+    root: info
     com.baomidou.mybatisplus.samples: debug
+    com.alibaba.druid.sql: debug

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.sharding.entity.User;
 import com.example.sharding.service.UserService;
 
+import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.RandomUtil;
 import cn.hutool.json.JSONUtil;
 
 /**
@@ -25,9 +27,9 @@ public class UserController {
 	@RequestMapping("/add_user")
 	public String addUser() {
 		User user =  new User();
-		user.setName("张三");
-		user.setPhone("13094808741");
-		user.setCode("110101199003076632");
+		user.setName("M"+RandomUtil.randomString("michaeldiane",3));
+		user.setPhone(RandomUtil.randomLong(13000000000L, 13094808741L)+"");
+		user.setCode(IdUtil.getSnowflake(1, 19).nextIdStr());
 		user.setSex(1);
 		int number = userService.addUser(user);
 		return "add user : "+number;
